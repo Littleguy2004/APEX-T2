@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate HTML, CSS & JavaScript - Task 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Intermediate HTML, CSS & JavaScript</h1>
+            <p class="subtitle">Task 2 - Full Stack Development Internship</p>
+        </header>
+
+        <section class="task-section">
+            <h2 class="task-title">Task 1: Contact Form with Validation</h2>
+            <div class="form-container">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                        <div class="error" id="fullNameError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="error" id="emailError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                        <div class="error" id="phoneError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Technical Support</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error" id="subjectError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <div class="error" id="messageError"></div>
+                    </div>
+
+                    <button type="submit" class="btn">Send Message</button>
+                    <div id="formStatus"></div>
+                </form>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <h2 class="task-title">Task 3: Responsive Layout with Flexbox & CSS Grid</h2>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item">Home</a>
+                <a href="#" class="nav-item">About</a>
+                <a href="#" class="nav-item">Services</a>
+                <a href="#" class="nav-item">Portfolio</a>
+                <a href="#" class="nav-item">Contact</a>
+            </nav>
+
+            <div class="responsive-layout">
+                <aside class="sidebar">
+                    <h3>Sidebar</h3>
+                    <p>This sidebar demonstrates responsive design using CSS Grid. It adapts to different screen sizes.</p>
+                    <ul style="margin-top: 15px;">
+                        <li style="margin: 5px 0;">📱 Mobile First</li>
+                        <li style="margin: 5px 0;">💻 Desktop Optimized</li>
+                        <li style="margin: 5px 0;">🎨 Modern Design</li>
+                    </ul>
+                </aside>
+
+                <main class="main-content">
+                    <h3>Main Content Area</h3>
+                    <p>This layout uses CSS Grid for the main structure and Flexbox for the navigation. The design is fully responsive and adapts to different screen sizes using media queries.</p>
+                    <p>Key features:</p>
+                    <ul style="margin: 15px 0; padding-left: 20px;">
+                        <li>Responsive grid layout</li>
+                        <li>Flexible navigation menu</li>
+                        <li>Mobile-first approach</li>
+                        <li>Smooth hover effects</li>
+                    </ul>
+                </main>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <h2 class="task-title">Task 4: Dynamic To-Do List</h2>
+            <div class="todo-container">
+                <div class="todo-input">
+                    <input type="text" id="todoInput" placeholder="Enter a new task...">
+                    <button class="btn" onclick="addTodo()">Add Task</button>
+                </div>
+                <ul id="todoList" class="todo-list"></ul>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <h2 class="task-title">Bonus: Dynamic Image Gallery</h2>
+            <div class="gallery-container">
+                <div class="image-input">
+                    <input type="url" id="imageUrl" placeholder="Enter image URL...">
+                    <input type="text" id="imageCaption" placeholder="Image caption...">
+                    <button class="btn" onclick="addImage()">Add Image</button>
+                </div>
+                <div id="imageGallery" class="gallery-grid"></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
